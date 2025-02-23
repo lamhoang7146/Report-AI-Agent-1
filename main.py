@@ -29,8 +29,6 @@ conversation_history = [
 # This function will be call if user provided information suitable context
 
 def analyze_stories(story, tasks):
-    if not os.path.exists('./datas'):
-        os.mkdir("./data")
     set_tasks = open("./data/tasks.txt", "w")
     set_tasks.write(tasks.replace("**", "").replace("*", "").replace("###", ""))
     set_tasks.close()
